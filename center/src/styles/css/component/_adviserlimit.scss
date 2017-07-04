@@ -1,0 +1,26 @@
+@import '../mixin',
+        '../variable';
+
+.adviser_limit {
+  width: 100%;
+  padding-top: 60px;
+  display: none;
+}
+
+.adviser_limit div,.adviser_limit a {
+  display: block;
+  margin: 0 auto;
+  font-size: 14px;
+  text-align: center;
+  color: #999;
+}
+
+.adviser_limit a {
+  margin-top: 28px;
+  width: 86px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: $border-radius-default;
+  border: 1px solid $color-blue;
+  color: $color-blue;
+}

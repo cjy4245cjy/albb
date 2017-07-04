@@ -1,0 +1,105 @@
+@import "../mixin",
+        "../variable";
+
+.redpacket{
+  border: 1px solid #E9E9Eb;
+
+  & .tab_content{
+    width: 898px;
+    margin: 0 auto;
+  }
+
+  & .card-item{
+    width: 422px;
+    height: 140px;
+    float: left;
+    border: 1px solid #e2e2e2;
+    border-bottom: 2px solid $color-global-red;
+    margin: 13px;
+    cursor: pointer;
+    padding: 20px 0;
+    overflow: hidden;
+
+    &.used{
+      opacity: 0.3;
+    }
+
+    & .left-page{
+      float: left;
+      width: 148px;
+      border-right: 1px dashed #bcbcbc;
+      height: 95px;
+      line-height: 95px;
+      color: $color-global-red;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      & .front{
+        font-size: 24px;
+      }
+
+      & .amount{
+        font-size: 40px;
+      }
+
+      & .back{
+        font-size: 30px;
+      }
+    }
+
+    & .right-page{
+      float: left;
+      padding: 6px 20px;
+      font-size: 16px;
+      color: #999;
+
+      & .title{
+        font-size: 20px;
+        color: #666;
+      }
+    }
+  }
+
+  & .ant-tabs-nav-container{
+    border-bottom: 1px solid #E9E9Eb;
+    overflow: visible;
+    margin-bottom: 0;
+  }
+
+  & .ant-tabs-nav-wrap{
+    height: 60px;
+    line-height: 60px;
+    background: #f5f5f5;
+    overflow: visible;
+
+    & .ant-tabs-nav .ant-tabs-tab-inner{
+      padding: 0;
+      width: 160px;
+      font-size: 14px;
+      text-align: center;
+      color: #333;
+    }
+
+    & .ant-tabs-ink-bar{
+      bottom: -1px;
+      height: 1px;
+      background: #fff;
+    }
+
+    & .ant-tabs-nav .ant-tabs-tab-active .ant-tabs-tab-inner{
+      background: #fff;
+      border-left: 1px solid #E9E9Eb;
+      border-right: 1px solid #E9E9Eb;
+      color: $color-global-red;
+      height: 61px;
+    }
+  }
+
+  & .page-container{
+    width: 100%;
+    overflow: hidden;
+    padding-right: 15px;
+  }
+}

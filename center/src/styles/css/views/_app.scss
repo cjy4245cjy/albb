@@ -1,0 +1,106 @@
+@import "../mixin",
+        "../variable";
+
+.main {
+  width: $main-width;
+  margin: 30px auto 40px;
+  @include clearfix;
+}
+
+.content {
+  float: left;
+  margin-left: 20px;
+  margin-top: 12px;
+  width: $main-width - $sidemenu-width - 2px - 20px;
+  background: #fff;
+  //border: 1px solid #E9E9Eb;
+}
+
+.color_blue {
+  color: $color-blue !important;
+}
+
+.color_orange {
+  color: $color-global-red !important;
+}
+
+.color_green {
+  color: $color-global-green !important;
+}
+
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;
+}
+
+.tabs {
+  // position: absolute;
+  // top: -30px;
+  // right: 8px;
+  @include clearfix;
+  height: 60px;
+  line-height: 60px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #E9E9Eb;
+}
+
+.tabs a {
+  display: block;
+  float: left;
+  width: 160px;
+  // height: 30px;
+  // line-height: 30px;
+  // background-color: #e6e6e6;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+  margin-right: 3px;
+
+  &:hover{
+    color: #333;
+  }
+}
+
+.tabs a.actived {
+  color: $color-global-red;
+  background-color: #fff;
+  border-left: 1px solid #E9E9Eb;
+  border-right: 1px solid #E9E9Eb;
+}
+
+.tab_content {
+  @include clearfix;
+
+  & .ant-pagination {
+   margin: 16px 0;
+   float: right;
+  }
+
+  & .none {
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+  }
+}
+
+.tab_buttons {
+  position: absolute;
+  top: -38px;
+  right: 15px;
+}
+
+.quill {
+  border-radius: $border-radius-default;
+  border: 1px solid $border-color-default;
+}
+
+.modal_detail {
+  font-size: 16px;
+
+  & .row {
+    padding-bottom: 10px;
+  }
+}

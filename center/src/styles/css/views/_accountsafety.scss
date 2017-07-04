@@ -1,0 +1,40 @@
+@import "../mixin",
+        "../variable";
+
+.accountsafety {
+
+  & .item {
+    line-height: 125px;
+    font-size: 16px;
+    border-bottom: 1px solid $border-color-default;
+    @include clearfix;
+
+    & div {
+      float: left;
+    }
+
+    & .icon {
+      color: $color-orange;
+      width: 62px;
+      font-size: 25px;
+    }
+
+    & .name {
+      width: 182px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    & .status {
+      width: 62px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    & .tips {
+      color: #acacac;
+      font-size: 14px;
+      width: 358px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "env": "production",
+  "port": 4006,
+  "api": {
+    "in": {
+      "root": "/api",
+      "proxy":{
+        "/pointbuy": "http://192.168.1.88:8084/ddy-dianmai/",
+        "/ass": "http://192.168.1.88:8082/ddy-ass/",
+        "/adviser": "http://192.168.1.88:8081/ddy-adviser-interface/"
+      }
+    },
+    "me": {
+      "root": "/api",
+      "proxy":{
+        "/pointbuy": "http://pointbuy.api.ddy98.me",
+        "/ass": "http://ass.api.ddy98.me",
+        "/adviser": "http://tg.api.ddy98.me"
+      }
+    },
+    "com": {
+      "root": "/api",
+      "proxy":{
+        "/pointbuy": "http://pointbuy.api.ddy98.com",
+        "/ass": "http://ass.api.ddy98.com",
+        "/adviser": "http://tg.api.ddy98.com"
+      }
+    }
+  }
+}

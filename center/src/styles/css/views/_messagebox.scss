@@ -1,0 +1,50 @@
+@import "../mixin",
+        "../variable";
+
+.messagebox {
+}
+
+.messagebox table {
+  margin-top: 24px;
+  width: 100%;
+  font-size: 14px;
+  border-bottom: 1px solid $border-color-default;
+}
+
+.messagebox table tr {
+  height: 48px;
+  border-top: 1px solid $border-color-default;
+}
+
+.messagebox table thead tr,.messagebox table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.messagebox table thead td:nth-child(2) {
+  text-indent: 60px;
+}
+
+.messagebox table td {
+  text-indent: 20px;
+}
+
+.messagebox table tbody td {
+  height: 55px;
+  cursor: pointer;
+}
+
+.messagebox table tbody td:nth-child(1) {
+  color: #000;
+}
+
+.messagebox .badge {
+  display: inline-block;
+  background-color: $color-orange;
+  color: #fff;
+  text-align: center;
+  border-radius: 18px;
+  min-width: 25px;
+  text-indent: 0;
+  font-size: 12px;
+  position: relative;
+}

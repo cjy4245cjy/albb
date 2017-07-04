@@ -1,0 +1,86 @@
+@import "../mixin",
+        "../variable";
+
+.side_menu {
+  float: left;
+  border: 1px solid $border-color-default;
+  background-color: #fff;
+  width: $sidemenu-width;
+  height: $sidemenu-height;
+  margin-top: 12px;
+}
+
+.side_menu .head_nick {
+  width: $sidemenu-width;
+  //height: 160px - 26px;
+  padding-top: 26px;
+}
+
+.side_menu .head_nick .headimg {
+  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  border: 1px solid $border-color-default;
+  background:#e6f2fa;
+  background-size: 70px 70px;
+}
+
+.side_menu .head_nick .nickname {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.side_menu .head_nick .info-icon {
+  width: 120px;
+  margin: 10px auto;
+  overflow: hidden;
+
+  & span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    overflow: hidden;
+    float: left;
+    margin: 0 10px;
+  }
+
+  & i{
+    font-size: 10px;
+  }
+}
+
+.side_menu .menus {
+  border-top: 1px solid $border-color-default;
+}
+
+.side_menu .menus li a {
+  display: block;
+  width: $sidemenu-width - 3;
+  height: 54px;
+  line-height: 54px;
+  text-align: center;
+  font-size: 14px;
+  color: #807f7f;
+}
+
+.side_menu .menus li a:hover {
+  color: $color-global-red;
+}
+
+.side_menu .menus li a.actived {
+  background-color: $color-global-red;
+  color: #fff;
+}
+
+.side_menu .hot-flag{
+  font-size: 24px;
+  color: #ff6f00;
+  position: absolute;
+  top: 0px;
+  right: 50px;
+}

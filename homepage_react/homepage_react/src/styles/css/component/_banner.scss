@@ -1,0 +1,113 @@
+@import
+    '../mixin',
+    '../variable';
+
+//banner图高度
+$banner-height: 400px;
+
+.banner {
+  position: relative;
+  height:$banner-height;
+
+  & .banner-slider {
+    margin-bottom: 0;
+
+    & .slick-slide {
+      width: 100%;
+      height: $banner-height;
+      //background: url('http://www.ddy98.com/images/index/banner/banner01.png');
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center center;
+
+      &.slide-image1{
+        background-image: url('http://www.ddy98.com/images/index/banner/banner01.png?t=20160308');
+      }
+      &.slide-image2{
+        background-image: url('http://www.ddy98.com/images/index/banner/banner07.png');
+      }
+      &.slide-image3{
+        background-image: url('http://www.ddy98.com/images/index/banner/banner03.png');
+      }
+    }
+
+    & .slick-dots {
+      bottom: 35px;
+      z-index:10;
+
+      & li.slick-active button:before {
+        color: #fff;
+        font-size: 12px;
+      }
+
+      & li button:before {
+        color: #fff;
+        font-size: 12px;
+      }
+    }
+  }
+
+  & .strategy-suggest {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    //height: $banner-height;
+    z-index:1;
+
+    & .suggest-wrapper {
+      width: 1200px;
+      //height: $banner-height;
+      margin: 0 auto;
+      position: relative;
+
+      & .suggest-box {
+        position: absolute;
+        top: 32px;
+        right: 0;
+        width: 240px;
+        height: 270px;
+        background-color: rgba(0,0,0,0.45);
+        color:#fff;
+        padding:15px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  & .slick-list{
+    width:100%;
+  }
+
+  //banner图公告
+  & .notice-list{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    line-height:35px;
+    z-index: 10;
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    font-size: 14px;
+
+    & .banner-notice-content{
+      float:left;
+      overflow: hidden;
+
+      & li{
+        float:left;
+        padding:0 30px;
+        max-width: 400px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        cursor: pointer;
+
+        &:hover a{
+          //text-decoration: underline;
+        }
+      }
+    }
+  }
+}

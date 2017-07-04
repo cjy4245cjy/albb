@@ -1,0 +1,95 @@
+@import "../mixin",
+        "../variable";
+
+.qaitem {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  border-bottom: 1px solid $border-color-default;
+
+  & .icon {
+    float: left;
+    height: 33px;
+    line-height: 30px;
+    width: 33px;
+    border: 2px solid $color-blue;
+    border-radius: 33px;
+    font-size: 18px;
+    color: $color-blue;
+    text-align: center;
+    margin-right: 20px;
+  }
+
+  & .text {
+    position: relative;
+    width: 655px;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+
+  & .time {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    color: #a9a9a9;
+    font-size: 12px;
+  }
+
+  & .question {
+    line-height: 35px;
+    @include clearfix;
+
+    & div {
+      float: left;
+    }
+  }
+  & .answer {
+    padding-top: 15px;
+    line-height: 35px;
+    @include clearfix;
+
+    & div {
+      float: left;
+    }
+  }
+  & .user {
+    margin-top: 15px;
+    position: relative;
+    height: 24px;
+
+    & img {
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      left: 51px;
+    }
+
+    & a {
+      position: absolute;
+      right: 0;
+    }
+
+    & .name {
+      position: absolute;
+      left: 85px;
+      top: 2px;
+    }
+
+    & .ui-icon-heart {
+      font-size: 12px;
+      position: absolute;
+      top: 2px;
+      left: 470px;
+      color: #a9a9a9;
+      cursor: pointer;
+    }
+
+    & .ui-icon-eye {
+      font-size: 12px;
+      position: absolute;
+      top: 2px;
+      left: 530px;
+      color: #a9a9a9;
+    }
+  }
+}

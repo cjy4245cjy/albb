@@ -1,0 +1,109 @@
+.login {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 999;
+
+  & .login-box {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 1px #ccc;
+    padding: 20px 30px;
+
+    & .login-input {
+      & input {
+        padding-left: 10px;
+        border: none;
+        height: 40px;
+        background-color: #fff;
+        width: 100%;
+        font-size: 16px;
+      }
+
+      & input:focus {
+        box-shadow: 0 0 3px #ccc;
+      }
+    }
+
+    & .login-alert {
+      border: 1px solid #fdc;
+      background-color: #ffeee6;
+      padding: 8px 8px 8px 16px;
+      border-radius: 6px;
+      color: #666;
+      font-size: 12px;
+    }
+
+    & .login-link {
+      &:after {
+          clear: both;
+          content: '.';
+          display: block;
+          height: 0;
+          line-height: 0;
+          overflow: hidden;
+      }
+      *height: 1%;
+
+      & a {
+        color: #3a3a3a;
+      }
+
+      & a:hover {
+        font-weight: bold;
+      }
+    }
+
+    & .login-btn {
+      // margin: 0 auto;
+      // width: 160px;
+      color: #fff;
+      font-size: 20px;
+      text-align: center;
+      padding: 12px 0;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    & .login-btn:hover {
+      opacity: 0.8;
+    }
+
+    & .login-btn.log-in {
+      margin-top: 20px;
+      background-color: #ff6f00;
+    }
+
+    & .login-btn.reg {
+      margin-top: 10px;
+      background-color: #b1b1b1;
+    }
+
+    & .login-close {
+      position: absolute;
+      right: -10px;
+      top: -10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      color: #fff;
+      background-color: #000;
+      text-align: center;
+      line-height: 30px;
+      font-family: 'Arial';
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    & .login-close:hover {
+      box-shadow: 0 0 3px #000;
+    }
+  }
+}

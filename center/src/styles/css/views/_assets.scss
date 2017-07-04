@@ -1,0 +1,503 @@
+@import "../mixin",
+        "../variable";
+
+.assets {
+  border: 1px solid #E9E9Eb;
+
+  & .subtabs {
+    position: relative;
+    height: 50px;
+    line-height: 65px;
+    text-align: right;
+    font-size: 14px;
+    border-bottom: 1px solid $border-color-default;
+  }
+
+  & .subtabs .subtab {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    @include clearfix;
+  }
+
+  & .subtabs .subtab a {
+    float: left;
+    display: block;
+    height: 50px;
+    line-height: 65px;
+    margin-right: 20px;
+    color: #666;
+  }
+  & .subtabs .subtab a:hover {
+    color: $color-orange;
+  }
+  & .subtabs .subtab a.actived {
+    color: $color-orange;
+    border-bottom: 1px solid $color-orange;
+  }
+}
+
+.assets .alipay {
+  & .item {
+    @include clearfix;
+  }
+
+  & .item .icon {
+    font-size: 60px;
+    position: relative;
+
+    & .ui-icon-alipay-top {
+      position: absolute;
+      color: #314977;
+    }
+
+    & .ui-icon-alipay-bottom {
+      position: absolute;
+      color: #f07f01;
+    }
+  }
+}
+
+.assets .recharge {
+  padding-top: 8px;
+  padding-bottom: 50px;
+
+  & .item {
+    padding: 42px 0 34px 18px;
+    border-bottom: 1px solid $border-color-default;
+
+    & .bank_list {
+      @include clearfix;
+
+      & li {
+        margin: 10px 16px 10px 0;
+        border: 1px solid rgb(221, 221, 221);
+        width: 140px;
+        height: 41px;
+        float: left;
+        display: block;
+        position: relative;
+        cursor: pointer;
+
+        & i {
+          position: absolute;
+          right: -1px;
+          top: -6px;
+          color: #ff6f00;
+          font-size: 20px;
+          visibility: hidden;;
+        }
+      }
+
+      & li.actived {
+        border-color: $color-orange;
+
+        & i {
+          visibility: visible;
+        }
+      }
+    }
+
+    &.value-input{
+      position: relative;
+      margin-bottom: 30px;
+
+      & .item-input-desc{
+        position: absolute;
+        top: 46px;
+        left: 360px;
+        font-size: 14px;
+        color: #8d8d8d;
+        line-height: 23px;
+      }
+
+      & .input-desc{
+        padding-left: 110px;
+        font-size: 12px;
+        margin-top: -5px;
+        color: #8d8d8d;
+      }
+    }
+
+    & .pay-methods{
+      overflow: hidden;
+      margin-top: 30px;
+
+      & .pay-desc{
+        float: left;
+        text-align: left;
+        width: 110.25px;
+        padding-top: 8px;
+        font-size: 14px;
+        color: #333;
+      }
+
+      & .pay-choice{
+        float: left;
+
+        & i{
+          display: none;
+        }
+
+        & .pay-fast{
+          float: left;
+          width: 140px;
+          height: 38px;
+          margin-right: 30px;
+          border: 1px solid #e1e1e1;
+          cursor: pointer;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAAmCAMAAAAhmYOEAAAAjVBMVEUAAAAAabEAabEAabEAabEAabEAabEAabEAabEAabEAabEAabEAabEAabEAabH/eRT/////////////////////////////eRT/eRT/////eRT/////////////eRQAabH/////o3X/yK//mWT/j1D/rYb/+PX/hDj/v6L/tpT/8Or/6N//4NT/2Mj/0LtxlmgrAAAAHnRSTlMAmRHMM+6qZlXdRIgiu3fn1OF7Rh6eXEpJEOS/uzCYfSaqAAACgUlEQVRYw+2W226jMBCGbYPBHELbJN22e8CAIYSc3v/x9h8byCZaVfJFJSrlk+LD5GI+jcdO2IMHDx488OX9qfTh6Z19IXDxs2FfSOkL8yZUStCcKpXPQcV5ym6idzJmGOqbxN0wmHlTD0PrLZMlSRxobdMlWocuGmcZNkEcJAlmLRMwydQjx6o6j8uW4k1VHUw7sasq4y0DkQjp0gBgpkkxJjUhC845fctBPMkgzT2Dc9mZm+jJV0ZoRxxFUQAXLqfqSC1jpWcku6tMh3TduO5Lc8C2aZuJU1Uda1+ZlATgwgDNYkpbQCBSqAgpRviIu56BzOG6Mw1kXAvtj8euvFC5fGWQM/u3ZSC3GiV1huFKPspcdo7qyplsMPclgV4ydvCWWWmNs0jCOI4Le1qoB8K51DATEdDQkzCbjmlorlxI6bDvKYxzKYkeveMGbxlpZSKuZ0hGJBqwcI5Jziwu3f50Op270pyhgiOxYN24O43OtYO3DNIlGbWKELEGqQAslBoELI+iIiaTLEtnGaKjdqWqnE05gkhX9m1r0Lr7ssHgLYNUfGXvD5QkCRBqlWGbUeMUnOoiZTzJOFqyoYRzwLbMxUZ3PbVM7S0ToSpSy1wFsBLYrRTEhMixVIIjmFDdwCTTGmO6E70iB9sv9OTNd6vugOnplKrSWyaQUsGAkwUkMGtOdxwEME3g6MhGmd7douPQ02HdPHkXGmcu/jIgLIo0D4XbiJBWYZqmOaaQAg4xycyvP9G3BvTup8hAbz8y1P1/ZL7fr/Y3lVnUn6s3P5ufb2zZbJ/ZYvh4/sEWwMaOv9ZsCdiSvL6yRbB92bD1b7YQ/rysnz/YUti8bNmDT/kLXRKZ0Yb5GfAAAAAASUVORK5CYII=");
+        }
+
+        & .pay-wangyin{
+          float: left;
+          width: 140px;
+          height: 38px;
+          margin-right: 30px;
+          border: 1px solid #e1e1e1;
+          cursor: pointer;
+          padding: 5px;
+          & > div{
+            background-image: url("//static.ddy98.com/front/1.0.0/bankcard/lianlian.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        & .pay-baofu{
+          float: left;
+          width: 140px;
+          height: 38px;
+          margin-right: 30px;
+          border: 1px solid #e1e1e1;
+          cursor: pointer;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          background-image: url("//static.ddy98.com/front/1.0.0/bankcard/baofu.jpg");
+        }
+
+        & .pay-yibao{
+          float: left;
+          width: 140px;
+          height: 38px;
+          margin-right: 30px;
+          border: 1px solid #e1e1e1;
+          cursor: pointer;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          background-image: url("//static.ddy98.com/front/1.0.0/bankcard/yibao.png");
+        }
+
+        & .pay-alipay {
+          float: left;
+          width: 140px;
+          height: 38px;
+          margin-right: 30px;
+          border: 1px solid #e1e1e1;
+          cursor: pointer;
+          padding: 5px;
+          & > div{
+            background-image: url("//static.ddy98.com/front/1.0.0/bankcard/alipay.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        & .pay-wechat {
+          float: left;
+          width: 140px;
+          height: 38px;
+          margin-right: 30px;
+          border: 1px solid #e1e1e1;
+          cursor: pointer;
+          padding: 5px;
+          & > div{
+            background-image: url("//static.ddy98.com/front/1.0.0/bankcard/wechat.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        & .active{
+          border: 1px solid $color-global-red;
+          position: relative;
+
+          & > i{
+            display: block;
+            position: absolute;
+            right: -1px;
+            top: -6px;
+            color: $color-global-red;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  & .ant-form-item{
+    margin-bottom: 6px;
+  }
+
+  & .ant-form-explain{
+    position: absolute;
+    top: 3px;
+    left: 230px;
+    width: 140px;
+    background: #fff;
+    z-index: 99;
+  }
+
+  & .recharge-tabs{
+
+    & > .item{
+      padding-top: 0;
+      border: 0;
+    }
+
+    & .use-desc{
+      font-size: 12px;
+      color: #8d8d8d;
+      padding-left: 110.25px;
+      margin-top: -10px;
+    }
+
+    & .ant-form-item > label{
+      text-align: left;
+      padding-top: 5px;
+      font-size: 14px;
+    }
+  }
+
+  & .recharge-submit-btn{
+    width: 140px;
+    height: 40px;
+    color: #fff;
+    background: $color-global-red;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 4px;
+    margin-left: 130.25px;
+    cursor: pointer;
+
+    &:hover{
+      background: #F96F66;
+    }
+  }
+  & .item, & .item label, & .item .ant-form-item {
+    font-size: 16px;
+  }
+  & .item.top .ant-form-item > label {
+    padding: 0;
+    vertical-align: baseline;
+  }
+  & .item.value-input .ant-form-item > label{
+    text-align: left;
+    padding-top: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  & .item.spec {
+    padding-left: 130.25px;
+    border-bottom: none;
+    color: #919191;
+    font-size: 12px;
+  }
+  & .item.spec p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  & .item.spec table td,& .item.spec table th {
+    text-align: center;
+  }
+}
+
+.assets .fast,.assets .ebank {
+  & .use_card {
+    height: 59px;
+    margin-top: 20px;
+    //padding-left: 65px;
+    @include clearfix;
+
+    & .uc_title {
+      float: left;
+      font-size: 14px;
+      color: #333;
+      width: 110.25px;
+      line-height: 38px;
+    }
+
+    & .uc_bankcard {
+      float: left;
+      width: 195px;
+      height: 38px;
+      overflow: hidden;
+      border: 1px solid $color-global-red;
+      position: relative;
+
+      & i {
+        position: absolute;
+        right: -1px;
+        top: -6px;
+        color: $color-global-red;
+        font-size: 20px;
+      }
+
+      & img {
+        position: absolute;
+        top: 0px;
+        height: 38px;
+      }
+
+      & div {
+        position: absolute;
+        height: 38px;
+        line-height: 38px;
+        right: 20px;
+        font-size: 12px;
+        color: #535252;
+      }
+    }
+  }
+}
+
+.assets .withdraw {
+  padding-bottom: 50px;
+
+  & .item {
+    padding: 50px 60px 0 18px;
+
+    & .ant-form-item {
+      font-size: 16px;
+
+      & label {
+        font-size: 14px;
+        padding-top: 5px;
+        text-align: left;
+        color: #333;
+      }
+    }
+  }
+  & .item.remarks {
+    margin: 25px 60px 0 120px;
+    padding: 20px 20px 10px 20px;
+    border-radius: $border-radius-default;
+    background-color: #f4f4f4;
+    font-size: 12px;
+    color: #919090;
+
+    & h2 {
+      padding-top: 20px;
+      font-size: 14px;
+    }
+
+    & p {
+      margin-top: 15px;
+      line-height: 20px;
+    }
+
+    & h2:nth-child(1) {
+      padding-top: 0;
+    }
+
+    & .middle {
+      margin-top: 20px;
+      border-top: 1px solid $border-color-default;
+      border-bottom: 1px solid $border-color-default;
+      @include clearfix;
+      & .box h2 {
+        padding-top: 0;
+      }
+      & .box p {
+        margin-top: 10px;
+      }
+      & .box {
+        padding-left: 35px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        float: left;
+      }
+      & .box:nth-child(1) {
+        width: 290px;
+        padding-left: 0;
+        border-right:  1px solid $border-color-default;
+      }
+    }
+  }
+
+  & .ant-form-item{
+    margin-bottom: 6px;
+  }
+
+  & .ant-form-explain{
+    position: absolute;
+    top: 3px;
+    left: 260px;
+    width: 300px;
+    background: #fff;
+    z-index: 99;
+    font-size: 12px;
+
+    & b {
+      font-size: 12px;
+      color: #8d8d8d;
+      font-weight: normal;
+    }
+  }
+
+  & .input-desc{
+    padding-left: 100.25px;
+    font-size: 12px;
+    color: #8d8d8d;
+  }
+
+  & .ant-btn-primary{
+    width: 140px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+
+  & .withdraw-card-container{
+    width: 240px;
+    height: 36px;
+    overflow: hidden;
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+
+    & > img{
+      float: left;
+      height: 36px;
+    }
+
+    & > span{
+      font-size: 14px;
+      color: #7f7f7f;
+    }
+  }
+
+  & .bind-card-desc{
+    font-size: 14px;
+    color: $color-global-red;
+    line-height: 28px;
+
+    & a{
+      text-decoration: underline;
+      margin-left: 30px;
+    }
+  }
+
+  input:-webkit-autofill{
+    background: #fff !important;
+    @include browser('box-shadow',0 0 0px 1000px #fff inset);
+  }
+}

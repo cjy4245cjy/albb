@@ -1,0 +1,58 @@
+@import "../mixin",
+        "../variable";
+
+/*bottom-copyright*/
+& .bottom-content{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: #393e4b;
+  min-width: 1200px;
+
+  & .main-page{
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  & .bottom-background{
+    position: relative;
+    z-index:10;
+  }
+
+  & .bottom-contact-list{
+    font-size: 18px;
+    color:#fff;
+    margin-top:20px;
+
+    & li{
+      height:48px;
+      line-height: 48px;
+      font-size: 14px;
+    }
+  }
+
+  & .bottom-desc-groups{
+    float: left;
+    padding-top: 20px;
+  }
+
+  & .weibo-concern{
+    width: 57px;
+    height: 23px;
+    background: #fff;
+    color: #fa6b4e;
+    line-height: 23px;
+    text-align: center;
+    margin-top: 5px;
+    cursor: pointer;
+    display: block;
+  }
+
+  & .bottom-p{
+    font-size: 14px;
+    color:#fff;
+    line-height:48px;
+    letter-spacing: 2px;
+  }
+
+}

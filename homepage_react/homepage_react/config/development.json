@@ -1,0 +1,87 @@
+{
+  "env": "development",
+  "port": 4006,
+  "api": {
+    "in": [
+      {
+        "root": "/api",
+        "proxy":{
+          "/pointbuy": "http://192.168.1.88:8084/ddy-dianmai/",
+          "/pbsupport": "http://192.168.1.88:8060/ddy-dianmai-supporter/",
+          "/simpb": "http://192.168.1.88:8084/ddy-dianmai-simu/",
+          "/ass": "http://192.168.1.88:8082/ddy-ass/",
+          "/advisers": "http://192.168.1.88:8081/ddy-interface/",
+          "/adviser": "http://192.168.1.88:8081/ddy-adviser-interface/",
+          "/activity": "http://192.168.1.88:8082/ddy-activity/",
+          "/bonus": "http://192.168.1.88:8082/ddy-bonus/"
+        }
+      },
+      {
+        "root": "/services",
+        "proxy":{
+          "/user": "http://192.168.1.88:14888/services/user/",
+          "/funds": "http://192.168.1.88:16888/services/funds/",
+          "/userExt": "http://192.168.1.88:15888/services/userExt/"
+        }
+      }
+    ],
+    "me": [
+      {
+        "root": "/api",
+        "proxy":{
+          "/pointbuy": "http://pointbuy.api.ddy98.me",
+          "/pbsupport": "http://120.26.196.73:8060/ddy-dianmai-supporter/",
+          "/simpb": "http://simpointbuy.api.ddy98.me",
+          "/ass": "http://ass.api.ddy98.me",
+          "/adviser": "http://tg.api.ddy98.me",
+          "/activity": "http://activity.api.ddy98.me",
+          "/bonus": "http://bonus.api.ddy98.me"
+        }
+      },
+      {
+        "root": "/services",
+        "proxy":{
+          "/user": "http://user.api.ddy98.me/",
+          "/funds": "http://funds.api.ddy98.me/",
+          "/fundsext": "http://fundsext.api.ddy98.me/",
+          "/pt": "http://pt.api.ddy98.me/"
+        }
+      }
+    ],
+    "com": [
+      {
+        "root": "/api",
+        "proxy":{
+          "/pointbuy": "http://pointbuy.api.ddy98.com",
+          "/ass": "http://ass.api.ddy98.com",
+          "/adviser": "http://tg.api.ddy98.com"
+        }
+      }
+    ],
+    "cn": [
+      {
+        "root": "/api",
+        "proxy":{
+          "/pointbuy": "http://121.41.2.51:8084/ddy-dianmai/",
+          "/pbsupport": "http://121.41.2.51:8060/ddy-dianmai-supporter/",
+          "/simpb": "http://121.41.2.51:8084/ddy-dianmai-simu/",
+          "/ass": "http://121.41.2.51:8082/ddy-ass/",
+          "/advisers": "http://121.41.2.51:8081/ddy-interface/",
+          "/adviser": "http://121.41.2.51:8081/ddy-adviser-interface/",
+          "/activity": "http://121.41.2.51:8082/ddy-activity/",
+          "/bonus": "http://121.41.2.51:8082/ddy-bonus/"
+        }
+      },
+      {
+        "root": "/services",
+        "proxy":{
+          "/user": "http://121.41.2.51:14888/services/user/",
+          "/funds": "http://funds.api.ddy98.cn/",
+          "/fundsext": "http://fundsext.api.ddy98.cn/",
+          "/userExt": "http://userext.api.ddy98.cn/",
+          "/pt": "http://pt.api.ddy98.cn/"
+        }
+      }
+    ]
+  }
+}

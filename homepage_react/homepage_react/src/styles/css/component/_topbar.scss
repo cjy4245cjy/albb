@@ -1,0 +1,37 @@
+@import
+    '../mixin',
+    '../variable';
+
+.topbar {
+  width: 100%;
+  min-width:1200px;
+  height: 34px;
+  line-height: 34px;
+  background-color: #f0efef;
+  font-size: 14px;
+
+  & .topbar-wrapper {
+    margin: 0 auto;
+    width: 1200px;
+    @include clearfix;
+
+    & .topbar-left {
+      float: left;
+    }
+
+    & .topbar-right {
+      float: right;
+
+      & a {
+        color: #6b6b6a;
+        display: inline-block;
+        margin-left: 40px;
+        transition: color .3s;
+      }
+
+      & a:hover {
+        color: #0085cc;
+      }
+    }
+  }
+}

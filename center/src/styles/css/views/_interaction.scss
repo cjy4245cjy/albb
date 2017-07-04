@@ -1,0 +1,51 @@
+@import "../mixin",
+        "../variable";
+
+.interaction {
+
+}
+
+.interaction {
+  & .mycomment {
+    & .pager {
+      @include clearfix;
+    }
+
+    & .ant-pagination {
+     margin: 16px 0;
+     float: right;
+    }
+
+    & .list li {
+      position: relative;
+      height: 80px;
+      line-height: 80px;
+      font-size: 14px;
+      border-bottom: 1px solid $border-color-default;
+    }
+
+    & .list li.none {
+      border-bottom: none;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    & .list li .time {
+      display: block;
+      font-size: 12px;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      line-height: normal;
+    }
+
+    & .list li a {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      font-size: 12px;
+      line-height: normal;
+    }
+  }
+}
